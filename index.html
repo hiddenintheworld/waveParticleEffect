@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Particle</title>
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.9/build/dat.gui.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+        #uiContainer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button {
+            margin-bottom: 5px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px black;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        }
+
+        #audioInput {
+            visibility: hidden; /* Hides the actual file input */
+            width: 0.1px;
+            height: 0.1px;
+        }
+
+        .file-label {
+            background-color: #1a73e8; /* Google Blue */
+        }
+
+        .file-label:hover {
+            background-color: #2a85f8;
+        }
+
+        #startButton {
+            background-color: #34a853; /* Google Green */
+        }
+
+        #startButton:hover {
+            background-color: #45b963;
+        }
+
+        #saveButton {
+            background-color: #fbbc05; /* Google Yellow */
+        }
+
+        #saveButton:hover {
+            background-color: #ffc715;
+        }
+
+        #loadButton {
+            background-color: #ea4335; /* Google Red */
+        }
+
+        #loadButton:hover {
+            background-color: #fb5447;
+        }
+    </style>
+</head>
+<body>
+    <div id="uiContainer">
+        <label for="audioInput" class="button file-label">Select Audio</label>
+        <input type="file" id="audioInput" accept="audio/*">
+        <button id="startButton" class="button">Start Visualization</button>
+        <button id="saveButton" class="button">Save Configuration</button>
+        <button id="loadButton" class="button">Load Configuration</button>
+    </div>
+    <script src="withblueparticle.js"></script>
+</body>
+</html>
