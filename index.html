@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wave Particle</title>
     <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+	<script src="https://unpkg.com/three@0.125.2/examples/js/exporters/GLTFExporter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.9/build/dat.gui.min.js"></script>
     <style>
         body { margin: 0; overflow: hidden; }
@@ -81,7 +82,9 @@
         <button id="startButton" class="button">Start Visualization</button>
         <button id="saveButton" class="button">Save Configuration</button>
         <button id="loadButton" class="button">Load Configuration</button>
+        <button id="createMeshButton" class="button">Create Mesh</button>
+        <button id="exportGLBButton" class="button">EXPORT GLB</button>
     </div>
-    <script src="withblueparticle.js"></script>
+    <script src="fastRig.js"></script>
 </body>
 </html>
